@@ -1,0 +1,231 @@
+body#home {
+
+	.banner {
+		text-align: center;
+		padding: 5% 0 4% 0;
+		background: url(../images/banner-home.jpg);
+		background-size: cover;
+		margin-bottom: 5%;
+		z-index: 2;
+
+		.features {
+			@include span(full);
+			background: url(../images/background-feature-shadow.png) bottom center no-repeat;
+			background-size: contain;
+
+			.feature {
+				float: left;
+				width: 18.4%;
+				margin-right: 2%;
+				padding: 6% 3.5% 10% 3.5%;
+				background-repeat: no-repeat;
+				background-size: contain;
+				overflow:hidden;
+
+				h2 {
+					@include robotoNormal;
+					line-height: 1;
+
+					font-size: 23px;
+					@include breakpoint(($mobile-landscape+1) 1260px) {
+						font-size: 24 / 14 + 0vw; 
+					}
+
+
+					color: #ffffff;
+
+					&:after {
+						display: none;
+					}
+				}
+
+				&#sectionRed { background-image: url(../images/background-feature-therapy.png); }
+				&#sectionOrange { background-image: url(../images/background-feature-alliedhealth.png); }
+				&#sectionGreen { background-image: url(../images/background-feature-clinical.png); }
+				&#sectionBlue { background-image: url(../images/background-feature-organisational.png); }
+				&#sectionPurple { background-image: url(../images/background-feature-professional.png); }
+
+				&:nth-of-type(5n) {
+					margin-right: 0px;
+				}
+
+				a.button {
+					position: relative;
+					display: inline-block;
+					@include fontsize(12, 1.4);
+					@include robotoBold;
+					text-transform: uppercase;
+					background: #ffffff !important;
+					border-radius: 100px;
+					padding: 2% 7%;
+					text-decoration: none;
+					margin-top: 3%;
+					margin-bottom: 10px;
+
+					&:after {
+						font-family: 'icons';
+						content: "c";
+						float: right;
+						text-transform: none;
+						@include fontsize(8, 2);
+						margin-left: 3px;
+					}
+
+					&:hover {
+						color: $grey !important;
+					}
+
+					&.active {
+
+						&:after {
+							content: "f";
+						}
+					}
+				}
+			}
+
+			.mega-menu {
+				display: block;
+				visibility: hidden;
+				width: auto;
+				background: #ffffff;
+				position: absolute;
+				padding: 10px 20px;
+				border-radius: 10px;
+				border: 0px;
+				z-index: 100;
+				text-align: left;
+				transform: translateX(-50%);
+				-webkit-transform: translateX(-50%);
+				border: 1px solid;
+				/*box-shadow: 0px 3px 2px #888888;*/
+
+				span.pip {
+					position: absolute;
+					top: -5px;
+					left: 50%;
+					width: 10px;
+					height: 10px;
+					background: #ffffff;
+					content: " ";
+					transform: rotate(45deg);
+				}
+
+				ul {
+					margin-left: 0;
+					margin-top: 10px;
+					margin-bottom: 5px;
+
+					li {
+						white-space: nowrap;
+						overflow: visible;
+						display: block;
+						margin-bottom: 5px;
+					}
+				}
+
+				&.sectionRed 		{ border-color: $sectionRed !important; }
+				&.sectionOrange 	{ border-color: $sectionOrange !important; }
+				&.sectionGreen 		{ border-color: $sectionGreen !important; }
+				&.sectionBlue 		{ border-color: $sectionBlue !important; }
+				&.sectionPurple 	{ border-color: $sectionPurple !important; }
+
+				&.active {
+					visibility: visible;
+				}
+			}
+
+			.mega-menu-pip {
+				display: none;
+				position: absolute;
+				top: -5px;
+				left: 50%;
+				width: 10px;
+				height: 10px;
+				background: #ffffff;
+				content: " ";
+				transform: rotate(45deg);
+				z-index: 101;
+			}
+		}
+	}
+
+	h1 {
+		@include fontsize(50, 1.2);
+		color: $grey;
+	}
+
+	h2.col {
+		margin-bottom: 7%; 
+		
+		&:after {
+			width: 15%;
+			border-color: $greyborder;
+		}
+	}
+
+	article.recent-event {
+		margin-bottom: 7%;
+		margin-right: 5%;
+		@include clearfix;
+
+		h3 a {
+			color: $grey;
+		}
+
+		h3, p {
+			display: inline;
+		}
+
+		.event-date {
+			float: left;
+			width: 20%;
+			@include robotoBold;
+			@include fontsize(30, 0.8);
+			text-align: center;
+			color: $navy;
+			border-radius: 40px;
+			border: 1px solid $greyborder;
+			padding: 4% 4% 3% 4%;
+			margin-right: 5%;
+
+			span {
+				display: block;
+				@include fontsize(10);
+				text-transform: uppercase;
+			}
+		}
+
+		.event-info {
+			float: left;
+			width: 75%;
+		}
+	}
+
+	article.recent-blog {
+		margin-bottom: 5%;
+
+		&:after {
+			display: block;
+			content: "";
+			width: 15%;
+			height: 20px;
+			border-bottom: 1px solid $greyborder;
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+
+		h3 a {
+			color: $grey;
+		}
+
+		p {
+			padding: 0px;
+			margin: 0px;
+		}
+	}
+}

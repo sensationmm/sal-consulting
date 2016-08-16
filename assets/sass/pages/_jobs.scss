@@ -1,0 +1,42 @@
+body#jobs, body#single-job {
+
+	.job {
+		border-radius: 10px;
+		background: $offwhite;
+		padding: 4% 5%;
+		border: 1px solid $greyborder; 
+		margin-bottom: 4%;
+		@include clearfix;
+
+		h3 {
+			@include robotoLight;
+			@include fontsize(30);
+			color: $navy;
+			margin-bottom: 30px;
+		}
+
+		ol, ul {
+			li {
+				margin-bottom: 10px;
+			}
+		}
+
+		.job-closing {
+			position: absolute;
+			top: 4%;
+			right: 5%;
+			@include robotoBold;
+			@include fontsize(14, 4);
+			color: $navy;
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+body#single-job {
+	
+	.job {
+		p { margin-bottom: 10px; }
+	}
+}

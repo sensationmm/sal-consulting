@@ -1,0 +1,24 @@
+body#page {
+
+	.body {
+		
+		article.col-main {
+			padding-right: 25%;
+
+			h2 {
+				&:after { width: 10%; }
+			}
+
+			img.float-right {
+				float: right;
+				margin: 0 -30% 5% 5%;
+				border-radius: 10px;
+			}
+		}
+
+		.col-right {
+			p { margin-bottom: 10px; }
+		}
+	}
+
+}

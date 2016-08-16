@@ -1,0 +1,293 @@
+.body {
+	@include container($max+0px);
+}
+
+.sectionRed 	{ color: $sectionRed !important; }
+.sectionOrange 	{ color: $sectionOrange !important; }
+.sectionGreen 	{ color: $sectionGreen !important; }
+.sectionBlue 	{ color: $sectionBlue !important; }
+.sectionPurple 	{ color: $sectionPurple !important; }
+
+body.fixed {
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+img.alignright {
+	float: right;
+	margin: 0 0 20px 20px;
+	width: 50%;
+}
+
+header {
+	padding: 2% 0 26px 0;
+	z-index: 2;
+	border-bottom: 1px solid $greyborder;
+
+	.logo {
+		float: left;
+		width: 11%;
+	}
+
+	nav {
+		float: left;
+		padding-top: 3.1%;
+		margin-top: 3px;
+
+		@include nolist;
+
+		a {
+			padding-bottom: 5px;
+			text-decoration: none !important;
+
+			&:hover {
+				color: $navy;
+			}
+
+			&.active {
+				color: $navy;
+				border-bottom: 1px solid $greyborder;
+			}
+		}
+	}
+
+	.parent-help, .parent-help-mobile {
+		float: left;
+    	padding-top: 3.5%;
+    	margin-top: 3px;
+
+    	a {
+	    	border-radius: 20px;
+	    	padding: 4px 10px 4px 30px;
+	    	@include fontsize(14);
+	    	color: #ffffff;
+	    	text-decoration: none;
+	    	background: $logoOrange url(../images/icon-family.png) center left no-repeat;
+
+	    	&:hover {
+	    		background-color: $logoBlue;
+	    	}
+		}
+	}
+
+	.parent-help-mobile { display: none; }
+
+	.info {
+		@include span(3 last);
+		text-align: center;
+		@include robotoBold;
+		@include fontsize(14, 1);
+
+		a.email {
+			display: inline-block;
+			@include fontsize(12, 1);
+			@include robotoBold;
+			text-transform: uppercase;
+			border-radius: 100px;
+			border: 1px solid $logoBlue;
+			padding: 2% 4%;
+			text-decoration: none;
+			margin-top: 3%;
+			color: $logoBlue;
+			white-space: nowrap;
+
+			&:hover {
+				color: $grey;
+				border-color: $grey;
+			}
+		}
+	}
+
+	.mobile-nav, .mobile-phone {
+		display: none;
+	}
+}
+
+.dropdown, .mega-menu  {
+	position: absolute;
+	display: none;
+	width: 100%;
+	background: #ffffff;
+	border-bottom: 1px solid $greyborder;
+	padding: 30px 0px;
+	z-index: 5;
+    animation-duration: 4s;
+
+	ul {
+		list-style: none;
+		float: left;
+		padding: 0 2% 0 0;
+		border-right: 1px solid $greyborder;
+		margin: 0 2% 0 0;
+		line-height: 1.8;
+		color: $greynav;
+
+		@include navlink;
+
+		&:nth-child(1) {
+			margin-left: 11%;
+		}
+
+		&:last-of-type {
+			border-right: none;
+		}
+
+		li.header {
+			text-transform: uppercase;
+			@include robotoBold;
+			color: $grey;
+		}
+
+		li {
+			padding-left: 0;
+			line-height: 1.4;
+			margin-bottom: 3%;
+		}
+	}
+
+	img {
+		display: block;
+		margin: 0px auto;
+	}
+}
+
+.strap {
+	background: $logoBlue top center no-repeat;
+	background-size: cover;
+	@include clearfix;
+	margin-bottom: 5%;
+}
+
+.body {
+	.col3 {
+		@include span(4);
+
+		&:nth-of-type(3n) {
+			@include last;
+		}
+	}
+
+	.col-left {
+		@include span(3);
+
+		.mobile-dropdown { display: none; }
+	}
+
+	.col-main {
+		@include span(9 last);
+	}
+
+	article.thanks {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	.call-cta {
+		display: inline-block;
+		border: 1px solid $navy;
+		border-radius: 10px;
+		padding: 15px 30px 15px 60px;
+		@include fontsize(16);
+		@include robotoBold;
+		color: $navy;
+		margin: 20px 0 30px 0;
+		background: url(../images/icon-telephone.png) 20px center no-repeat;
+		@include navlink;
+
+		&.has-strap {
+			padding: 10px 30px 10px 60px;
+		}
+
+		span {
+			@include fontsize(12, 0.8);
+			@include robotoNormal;
+			display: block;
+		}
+
+		a {
+			color: $navy !important;
+			text-decoration: none !important;
+			cursor: default;
+		}
+	}
+}
+
+footer {
+	padding: 4.5% 0;
+	background: $greylight;
+	margin-top: 6%;
+	@include fontsize(13);
+
+	ul {
+		list-style: none;
+		float: left;
+		padding: 0;
+		margin: 0 5% 0 0;
+		line-height: 1.8;
+		color: $greynav;
+
+		li { 
+			white-space: nowrap;
+			padding-left: 0;
+		}
+
+		@include navlink;
+
+		&.twocol {
+
+			vertical-align: top;
+
+			> li { 
+				display: inline;
+				padding-left: 0;
+				padding-right: 0;
+				vertical-align: top;
+				clear: left;
+
+				ul {
+					display: block;
+					margin: 0;
+					vertical-align: top;
+					margin-right: 20px;
+
+					li { padding-left: 0; }
+				}
+			}
+		}
+
+		li.header {
+			display: block;
+			text-transform: uppercase;
+			@include robotoBold;
+			color: $grey;
+			float: none;
+		}
+	}
+
+	.info {
+		float: right;
+		text-align: center;
+
+		.logo {
+		}
+
+		.tel {
+			clear: both;
+			@include robotoBold;
+			@include fontsize(14);
+		}
+
+		ul.social {
+			width: 100%;
+			margin-top: 7%;
+			li {
+				display: inline;
+				text-align: center;
+				padding: 5%;
+			}
+		}
+	}
+}

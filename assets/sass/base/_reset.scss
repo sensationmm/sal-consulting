@@ -1,0 +1,66 @@
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+h1, h2, h3, h4, h5, p {
+	padding: 0px;
+	margin: 0px 0px 15px 0px;
+	position: relative;
+	z-index: 1;
+}
+
+p {
+	clear: none;
+}
+
+header, article, section, aside, footer, div {
+	display: block; 
+	position: relative;
+	z-index: 1;
+}
+
+ul, li {
+	padding: 0px;
+	margin: 0px;
+}
+
+ul {
+	padding-left: 25px;
+	margin-bottom: 15px;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+form {
+	
+	input, select {
+		outline: 0 !important;
+		-webkit-appearance: none;
+	}
+
+	input[type="submit"] {
+		outline: 0px !important;
+		-webkit-appearance: none
+	}
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+textarea, input {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-appearance: none;
+}

@@ -1,0 +1,240 @@
+body[data-style="default"] {
+	.strap { background-image: url(../images/strap-default.jpg) !important; }
+}
+
+body[data-style="red"] {
+	.strap { background-image: url(../images/strap-red.jpg) !important; }
+
+	h2 {
+		color: $sectionRed;
+
+		&:after {
+			border-color: $sectionRed;
+		}
+	}
+
+	form {
+		input[type="submit"] {
+			background-color: $sectionRed;
+
+			&:hover {
+				background-color: $grey;
+			}
+		}
+	}
+
+	.body .call-cta {
+		border-color: $sectionRed;
+		background-color: $sectionRed;
+		color: #ffffff;
+		background-image: url(../images/icon-telephone-white.png); 
+
+		a { color: #ffffff !important; }
+	}
+}
+
+body#section[data-style="red"] {
+	article.col-main {
+		.section-links {
+			.section-link {
+				a { border-color: $sectionRed; }
+				a:hover { 
+					color: $sectionRed; 
+				}
+			}
+		}
+	}
+}
+
+
+
+
+body[data-style="orange"] {
+	.strap { background-image: url(../images/strap-orange.jpg); }
+
+	h2 {
+		color: $sectionOrange;
+
+		&:after {
+			border-color: $sectionOrange;
+		}
+	}
+
+	form {
+		input[type="submit"] {
+			background-color: $sectionOrange;
+
+			&:hover {
+				background-color: $grey;
+			}
+		}
+	}
+
+	.body .call-cta {
+		border-color: $sectionOrange;
+		background-color: $sectionOrange;
+		color: #ffffff;
+		background-image: url(../images/icon-telephone-white.png); 
+
+		a { color: #ffffff !important; }
+	}
+}
+
+body#section[data-style="orange"] {
+	article.col-main {
+		.section-links {
+			.section-link {
+				a { border-color: $sectionOrange; }
+				a:hover { 
+					color: $sectionOrange; 
+				}
+			}
+		}
+	}
+}
+
+
+
+
+body[data-style="green"] {
+	.strap { background-image: url(../images/strap-green.jpg); }
+
+	h2 {
+		color: $sectionGreen;
+
+		&:after {
+			border-color: $sectionGreen;
+		}
+	}
+
+	form {
+		input[type="submit"] {
+			background-color: $sectionGreen;
+
+			&:hover {
+				background-color: $grey;
+			}
+		}
+	}
+
+	.body .call-cta {
+		border-color: $sectionGreen;
+		background-color: $sectionGreen;
+		color: #ffffff;
+		background-image: url(../images/icon-telephone-white.png); 
+
+		a { color: #ffffff !important; }
+	}
+}
+
+body#section[data-style="green"] {
+	article.col-main {
+		.section-links {
+			.section-link {
+				a { border-color: $sectionGreen; }
+				a:hover { 
+					color: $sectionGreen; 
+				}
+			}
+		}
+	}
+}
+
+
+
+
+body[data-style="blue"] {
+	.strap { background-image: url(../images/strap-blue.jpg); }
+
+	h2 {
+		color: $sectionBlue;
+
+		&:after {
+			border-color: $sectionBlue;
+		}
+	}
+
+	form {
+		input[type="submit"] {
+			background-color: $sectionBlue;
+
+			&:hover {
+				background-color: $grey;
+			}
+		}
+	}
+
+	.body .call-cta {
+		border-color: $sectionBlue;
+		background-color: $sectionBlue;
+		color: #ffffff;
+		background-image: url(../images/icon-telephone-white.png); 
+
+		a { color: #ffffff !important; }
+
+		&:hover {
+			background-color: $grey;
+			border-color: $grey;
+		}
+	}
+}
+
+body#section[data-style="blue"] {
+	article.col-main {
+		.section-links {
+			.section-link {
+				a { border-color: $sectionBlue; }
+				a:hover { 
+					color: $sectionBlue; 
+				}
+			}
+		}
+	}
+}
+
+
+
+
+body[data-style="purple"] {
+	.strap { background-image: url(../images/strap-purple.jpg); }
+
+	h2 {
+		color: $sectionPurple;
+
+		&:after {
+			border-color: $sectionPurple;
+		}
+	}
+
+	form {
+		input[type="submit"] {
+			background-color: $sectionPurple;
+
+			&:hover {
+				background-color: $grey;
+			}
+		}
+	}
+
+	.body .call-cta {
+		border-color: $sectionPurple;
+		background-color: $sectionPurple;
+		color: #ffffff;
+		background-image: url(../images/icon-telephone-white.png); 
+
+		a { color: #ffffff !important; }
+	}
+}
+
+body#section[data-style="purple"] {
+	article.col-main {
+		.section-links {
+			.section-link {
+				a { border-color: $sectionPurple; }
+				a:hover { 
+					color: $sectionPurple; 
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+<?php include 'template-section-page.php'; ?>

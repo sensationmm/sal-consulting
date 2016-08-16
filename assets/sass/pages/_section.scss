@@ -1,0 +1,109 @@
+body#section, body#page, body#contact, body#single-event {
+	
+	article.col-main {
+		@include span(7);
+		padding-right: 0 !important;
+
+		h2 {
+			clear: both;
+		}
+
+		.mobile-intro {
+			display: none;
+		}
+
+		.section-links {
+			@include span(full);
+			margin-bottom: 5%;
+
+			.section-link {
+				float: left;
+				width: 32%;
+				margin: 0 2% 2% 0;	
+				@include fontsize(16);	
+					@include clearfix;		
+
+				&:nth-child(3n) {
+					margin-right: 0%;
+				}
+
+				a {
+					display: block;
+					height: 0;
+					padding: 4% 5% 25% 5%;
+					border: 1px solid $greyborder;
+					border-radius: 10px;
+					color: $grey;
+					text-align: center;
+					text-decoration: none;
+					@include clearfix;
+
+					span {
+						position: absolute;
+					    top: 50%;
+					    transform: translateY(-50%);
+					    display: block;
+					    text-align: center;
+					    width: 90%;
+					}
+				}
+			}
+		}
+
+		&.box {
+			border: 1px solid $greyborder;
+			background: $offwhite;
+			border-radius: 10px;
+			padding: 4% !important;
+		}
+
+		nav.breadcrumb {
+			@include fontsize(12);
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0 0 20px 0;
+
+				li {
+					display: inline;
+					@include navlink;
+					color: $greynav;
+					padding: 0;
+					margin-right: 10px;
+
+					a {
+						color: $logoBlue;
+					}
+				}
+			}
+		}
+	}
+
+	section.col-right {
+		@include span(5 last);
+		@include fontsize(14);
+	}
+
+}
+
+body#contact {
+
+	article {
+		h2 {
+			@include fontsize(30);
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.col-right {
+		@include navlink;
+		a {
+			@include robotoBold;
+			color: $logoBlue;
+		}
+	}
+}
